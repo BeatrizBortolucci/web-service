@@ -13,5 +13,5 @@
       - name: Render Deployment
         uses: sws2apps/render-deployment@v1.2.0
         with:    
-          serviceId: ${{secrets.MY_RENDER_SERVICE_ID}}
-          apiKey: ${{secrets.MY_RENDER_API_KEY}}
+          service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.MY_RENDER_API_KEY }}
