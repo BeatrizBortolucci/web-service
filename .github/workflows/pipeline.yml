@@ -10,8 +10,11 @@
     build:
       runs-on: ubuntu-latest
       steps:
-      - name: Render Deployment
-        uses: sws2apps/render-deployment@v1.2.0
-        with:    
-          serviceId: ${{ secrets.MY_RENDER_SERVICE_ID }}
-          apiKey: ${{ secrets.MY_RENDER_API_KEY }}
+      - uses: actions/checkout@v3
+      - name: Render Deploy Action
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+            # ID of the service to deploy
+            service-id: ${{ secrets.MY_RENDER_SERVICE_ID }}
+            # A Render API key
+            api-key: ${{ secrets.MY_RENDER_API_KEY }}
